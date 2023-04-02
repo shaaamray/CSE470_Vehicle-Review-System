@@ -1,0 +1,86 @@
+.seepost{
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 1px 24px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 24px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 24px -4px rgba(0,0,0,0.75);
+}
+
+.seepostWrapper{
+    padding: 10px;
+}
+
+.seepostTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seepostTopLeft{
+    display: flex;
+    align-items: center;
+}
+
+.seepostProfImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.seepostUsername{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.seepostDate{
+    font-size: 12px;
+}
+
+.seepostCenter{
+    margin: 15px 0;
+}
+
+.seepostText{
+    font-size: 18px;
+}
+
+.seepostImg{
+    margin-top: 20px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.seepostBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seepostBottomLeft{
+    display: flex;
+    align-items: center;
+}
+
+.reactIcon{
+    width: 24px;
+    height: 24px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.reactCounter{
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.seepostReviews{
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+}

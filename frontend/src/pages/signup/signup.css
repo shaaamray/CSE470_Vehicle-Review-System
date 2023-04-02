@@ -1,0 +1,91 @@
+.loginContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox{
+    width: 33%; 
+    box-shadow: 0px 1px 24px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 24px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 24px -4px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    margin: 200px auto;
+}
+
+.loginWrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.loginTop{
+    flex: 2;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.loginLogo{
+    margin-left: 10px;
+    height: 100px;
+    width: 170px;
+}
+
+.loginName{
+    margin-left: 10px;
+    font-size: 20px;
+    margin: 30px 100px;
+    color: aliceblue;
+}
+
+.loginCreds{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.loginCredInfo{
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.loginCredInfo:focus{
+    outline: none;
+}
+
+.loginButton{
+    width: 20%;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.loginMsg{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.loginBottom{
+    flex: 1;
+}
+
+.signupReg{
+    margin-top: 15px;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
