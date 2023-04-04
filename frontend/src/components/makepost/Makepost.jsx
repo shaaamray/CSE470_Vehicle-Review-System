@@ -22,20 +22,21 @@ export default function Makepost() {
 
   const userId = user._id;
   const [desc, setDesc] = useState("");
+  const [category, setCategory] = useState("");
   const [file, setFile] = useState(null);
   console.log(file, 3);
 
   const dispatch = useDispatch();
 
-  const uploadHandler = (e) =>{
+  const uploadHandler = (e) => {
     e.preventDefault();
-    postUpdateAction(dispatch, {desc, userId})
-    console.log("Dispatched")
-  }
+    postUpdateAction(dispatch, { desc, userId });
+    console.log("Dispatched");
+  };
 
-  const imageHandler = (e) =>{
+  const imageHandler = (e) => {
     e.preventDefault();
-    const fname = new Date().getTime() + file.name
+    const fname = new Date().getTime() + file.name;
 
     const storage = getStorage(app);
     const storageRef = ref(storage, fname);
@@ -61,7 +62,7 @@ export default function Makepost() {
           case "running":
             console.log("Upload is running");
             break;
-          default :
+          default:
             break;
         }
       },
@@ -75,14 +76,18 @@ export default function Makepost() {
           console.log("File available at", downloadURL);
           fetch(`http://localhost:8800/api/posts`, {
             method: "POST",
-            headers: {"Content-Type":"application/JSON"},
-            body: JSON.stringify({desc:desc, userId: userId, img: downloadURL})
-          })
-
+            headers: { "Content-Type": "application/JSON" },
+            body: JSON.stringify({
+              desc: desc,
+              category: category,
+              userId: userId,
+              img: downloadURL,
+            }),
+          });
         });
       }
     );
-  }
+  };
 
   return (
     <div className="shareBox">
@@ -110,7 +115,23 @@ export default function Makepost() {
               />
             </label>
             {/* <button className="shareButton" onClick={uploadHandler}>Upload</button> */}
-            <button className="shareButton" onClick={imageHandler}>Share Post</button>
+            <div className="shareOption">
+              <label htmlFor="category-select">Category:</label>
+              <select
+                id="category-select"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+              >
+                <option value="">Select</option>
+                <option value="Car">Car</option>
+                <option value="SUV">SUV</option>
+                <option value="Bike">Bike</option>
+                <option value="Bus">Bus</option>
+              </select>
+            </div>
+            <button className="shareButton" onClick={imageHandler}>
+              Share Post
+            </button>
           </div>
         </div>
       </div>

@@ -18,9 +18,13 @@ const PostSchema = new mongoose.Schema(
             type:Array,
             default:[],
         },
+        category:{
+            type:String,
+            required: true,
+        },
         reviews:[
             {
-                user:{
+                postid:{
                     type: mongoose.Schema.ObjectId,
                     required: true,
                 },
@@ -37,8 +41,16 @@ const PostSchema = new mongoose.Schema(
                     required:true,
                     max: 50,
                 },
+                rating:{
+                    type: Number,
+                    required: true,
+                }
             },
         ],
+        averageRating:{
+            type: Number,
+            default: 0,
+        }
     },
     {timestamps: true}
 );

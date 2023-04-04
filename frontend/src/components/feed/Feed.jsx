@@ -43,7 +43,7 @@ export default function Feed() {
         </div>
       </div>
       <div className="suggetion">
-        
+        <h4>Category</h4>
       </div>
     </div>
   );
