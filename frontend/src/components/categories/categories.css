@@ -1,0 +1,53 @@
+.cateBox {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.cateBoxWrapper {
+  padding: 10px;
+}
+
+.cateBoxTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cateTitle {
+  font-weight: bold;
+  margin-left: 40%;
+  text-align: center;
+}
+
+.cateBoxDown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cateEach {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.cateName {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.cateImg {
+  margin-top: 5px;
+  height: 170px;
+  width: 90%;
+  border-radius: 8px;
+}

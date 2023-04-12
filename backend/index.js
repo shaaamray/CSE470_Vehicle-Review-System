@@ -8,6 +8,7 @@ const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const profileRoute = require("./routes/profile")
 const postRoute = require("./routes/posts")
+const trendingRoute = require("./routes/trending")
 const cors = require("cors");
 // const multer = require("multer");
 // const path = require("path");
@@ -51,6 +52,7 @@ app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/profile", profileRoute)
 app.use("/api/posts", postRoute)
+app.use("/api/trendings", trendingRoute)
 
 
 app.listen(8800,()=>{
