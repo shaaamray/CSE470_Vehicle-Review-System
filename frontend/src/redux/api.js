@@ -1,17 +1,10 @@
 import axios from "axios";
 import {
-  regStart,
-  regSuccess,
-  regFailure,
-  profUpdateStart,
-  profUpdateSuccess,
-  profUpdateFailure,
-  getUserStart,
-  getUserSuccess,
-  getUserFailure,
-  postUpdateStart,
-  postUpdateSuccess,
-  postUpdateFailure
+  getUserFailure, getUserStart,
+  getUserSuccess, postUpdateFailure, postUpdateStart,
+  postUpdateSuccess, profUpdateFailure, profUpdateStart,
+  profUpdateSuccess, regFailure, regStart,
+  regSuccess
 } from "./userSlice";
 
 

@@ -1,33 +1,33 @@
-.cateBox {
+.catemBox {
   width: 100%;
   border-radius: 10px;
   margin: 10px 0;
 }
 
-.cateBoxWrapper {
+.catemBoxWrapper {
   padding: 10px;
 }
 
-.cateBoxTop {
+.catemBoxTop {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.cateTitle {
+.catemTitle {
   font-weight: bold;
   margin-left: 40%;
   text-align: center;
 }
 
-.cateBoxDown {
+.catemBoxDown {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-.cateEach {
+.catemEach {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@
   position: relative;
 }
 
-.cateName {
+.catemName {
   position: absolute;
   top: 15%;
   left: 50%;
@@ -45,9 +45,9 @@
   font-size: 24px;
 }
 
-.cateImg {
+.catemImg {
   margin-top: 5px;
-  height: 170px;
-  width: 90%;
+  height: 190px;
+  width: 325px;
   border-radius: 8px;
 }

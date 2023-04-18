@@ -3,7 +3,7 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
 //get user profile
-router.get("/", async (req, res) => {
+router.get("/", async(req, res) => {
   const userId = req.query.userId;
   const username = req.query.username;
 
@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
 });
 
 //update user profile
-router.put("/:id", async (req, res) => {
+router.put("/:id", async(req, res) => {
   try {
     let user = await User.findById(req.params.id);
     if (user) {
@@ -37,7 +37,7 @@ router.put("/:id", async (req, res) => {
 });
 
 //delete user profile
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", async(req, res) => {
   if (req.body.userID === req.params.id || req.body.isAdmin) {
     try {
       await User.findByIdAndDelete(req.params.id);
@@ -51,7 +51,7 @@ router.delete("/:id", async (req, res) => {
 });
 
 //get user details
-router.get("/get/userDetails/:id", async (req, res) => {
+router.get("/get/userDetails/:id", async(req, res) => {
   try {
     const user = await User.findById(req.params.id);
     console.log(user);
@@ -66,7 +66,7 @@ router.get("/get/userDetails/:id", async (req, res) => {
 });
 
 //get connections/friends
-router.get("/friends/:userId", async (req, res) => {
+router.get("/friends/:userId", async(req, res) => {
   try {
     const user = await User.findById(req.params.userId);
     const connections = await Promise.all(
@@ -86,8 +86,23 @@ router.get("/friends/:userId", async (req, res) => {
   }
 });
 
+// all followings of a user
+
+router.get("/followings/only/:id", async(req, res) => {
+  try{
+    const user = await User.findById(req.params.id);
+    let connections = [];
+    user.followings.map((f) =>{
+      connections.push(f); 
+    });
+    res.status(200).json(connections);
+  }catch(err){
+    res.status(500).json(err);
+  }
+});
+
 //follow a user
-router.put("/:id/follow", async (req, res) => {
+router.put("/:id/follow", async(req, res) => {
   if (req.body.userId != req.params.id) {
     try {
       const user = await User.findById(req.params.id);
@@ -108,7 +123,7 @@ router.put("/:id/follow", async (req, res) => {
 });
 
 //unfollow a user
-router.put("/:id/unfollow", async (req, res) => {
+router.put("/:id/unfollow", async(req, res) => {
   if (req.body.userId != req.params.id) {
     try {
       const user = await User.findById(req.params.id);
@@ -130,7 +145,7 @@ router.put("/:id/unfollow", async (req, res) => {
 
 // get unknown connections
 
-router.get("/unknown/con/:userId", async (req, res) => {
+router.get("/unknown/con/:userId", async(req, res) => {
   try {
     const currentUser = await User.findById(req.params.userId);
     const followings = currentUser.followings;

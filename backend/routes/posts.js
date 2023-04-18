@@ -109,4 +109,26 @@ router.get("/rating/:postid", async(req, res) => {
     }
 })
 
+// all posts of a particular category
+
+router.get("/category/:userId", async(req, res) => {
+    try{
+        const user = await User.findById(req.params.userId);
+        const userPosts = await Post.find({userId: user._id, category: req.query.category});
+        const friendPosts = await Promise.all(
+            user.followings.map((friendId) => {
+                return Post.find({userId: friendId, category: req.query.category});
+            })
+        );
+        const allPosts = userPosts.concat(...friendPosts);
+        res.status(200).json(allPosts);
+    }catch(err){
+        res.status(500).json({
+            error: err.message
+        });
+    }
+});
+
+
+
 module.exports = router;

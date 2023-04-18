@@ -1,31 +1,31 @@
-.connectionBox{
-    width: 100%;
-    border-radius: 10px;
-    margin: 10px 0;
-    box-shadow: 0px 1px 24px -4px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 1px 24px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 24px -4px rgba(0,0,0,0.75);
+.connectionBox {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0px 1px 24px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 24px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 24px -4px rgba(0, 0, 0, 0.75);
 }
 
-.connectionBoxWrapper{
-    padding: 10px;
+.connectionBoxWrapper {
+  padding: 10px;
 }
 
-.connectionBoxTop{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.connectionBoxTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.connectionTitle{
-    font-weight: bold;
-    margin-left: 40%;
-    text-align: center;
+.connectionTitle {
+  font-weight: bold;
+  margin-left: 40%;
+  text-align: center;
 }
 
-.connectionBoxDown{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.connectionBoxDown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }

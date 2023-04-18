@@ -5,6 +5,7 @@ import Signup from "./pages/signup/Signup";
 import ProfUpdate from "./pages/profUpdate/ProfUpdate"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Category from "./pages/category/Category";
 // import Topbar from "./components/topbar/Topbar";
 
 function App() {
@@ -21,11 +22,14 @@ function App() {
           </Route>
           <Route path="/login">{loggedInUser ? <Home /> : <Login />}</Route>
           <Route path="/signup">{loggedInUser ? <Home /> : <Signup />}</Route>
-          <Route path="/profile/:username">
+          <Route path="/profile/:id">
             {loggedInUser ? <Profile /> : <Login />}
           </Route>
-          <Route path="/profUpdate/:username">
+          <Route path="/profUpdate/:id">
             {loggedInUser ? <ProfUpdate/> : <Login />}
+          </Route>
+          <Route path="/category/:category">
+            {loggedInUser ? <Category/> : <Login />}
           </Route>
         </Switch>
       </Router>

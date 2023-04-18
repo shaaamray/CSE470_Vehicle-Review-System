@@ -10,15 +10,18 @@
 }
 
 .topbarLeft{
-    flex: 3;
+    flex: 2.5;
 }
 
 .topbarCenter{
-    flex: 4.5;
+    flex: 5.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .topbarRight{
-    flex: 5.5;
+    flex: 4.5;
 }
 
 .logo{
@@ -30,16 +33,37 @@
 }
 
 .searchbar{
-    width: 100%;
+    width: 60%;
     height: 30px;
     background-color: white;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-radius: 30px;
 }
 
-.searchIcon{
+.simUsers{
     margin-left: 10px;
+    position: absolute;
+    top: 50px;
+    right: 535px;
+}
+
+.similar{
+    border-radius: 15px;
+    background-color: rgb(255, 226, 62);
+    padding-bottom: 6px;
+}
+
+.searchOptions{
+    padding:4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchIcon{
+    margin-right: 10px;
     font-size: 20px !important;
 }
 
@@ -74,4 +98,24 @@
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+}
+
+.searchOptionImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.searchOptionName{
+    margin-left: 6px;
+    font-weight: lighter;
+    color: black;
+}
+
+.searchOptionHR{
+    color: white;
+    font-weight: lighter;
+    width: 90%;
+    margin-left: 8px;
 }

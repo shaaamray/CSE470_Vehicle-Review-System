@@ -28,7 +28,7 @@ export default function Feed() {
     };
     getPost();
   }, []);
-  console.log(allpost);
+  console.log(allpost, 333);
 
   return (
     <div className="feed">
@@ -42,13 +42,13 @@ export default function Feed() {
       <div className="makePost">
         <div className="makePostWrapper">
           <Makepost />
-          <Trending />
+          <Categories />
         </div>
       </div>
       <div className="suggestion">
         <div className="suggestionWrapper">
           <Connections />
-          <Categories />
+          <Trending />
         </div>
       </div>
     </div>

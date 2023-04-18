@@ -1,9 +1,9 @@
-import "./connections.css";
 import Con from "./Con";
+import "./connections.css";
 
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import axios from "axios";
 
 export default function Connections() {
   const data = useSelector((state) => state.user);
@@ -14,7 +14,7 @@ export default function Connections() {
     const getCons = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8800/api/users//unknown/con/${user._id}`
+          `http://localhost:8800/api/users/unknown/con/${user._id}`
         );
         setCons(res.data);
       } catch (err) {
@@ -22,7 +22,7 @@ export default function Connections() {
       }
     };
     getCons();
-  }, []);
+  }, [user._id]);
 
   return (
     <div className="connectionBox">
