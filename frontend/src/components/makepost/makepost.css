@@ -26,6 +26,7 @@
 }
 
 .shareDesc{
+    width: 60%;
     margin-right: 10px;
     font-size: 14px;
     border: none;
@@ -51,7 +52,7 @@
 .shareOption{
     display: flex;
     align-items: center;
-    margin-right: 25px;
+    margin-right: 15px;
     cursor: pointer;
 }
 
@@ -60,7 +61,7 @@
 }
 
 .shareIconText{
-    margin-right: 10px;
+    margin-right: 2px;
 }
 
 .shareButton{

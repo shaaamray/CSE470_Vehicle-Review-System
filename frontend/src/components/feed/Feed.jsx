@@ -1,7 +1,9 @@
 import "./feed.css";
 import Seepost from "../seepost/Seepost";
 import Makepost from "../makepost/Makepost";
-// import { Posts } from "../../dummyData";
+import Trending from "../trending/Trending";
+import Connections from "../connections/Connections";
+import Categories from "../categories/Categories";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
@@ -19,14 +21,14 @@ export default function Feed() {
         const res = await axios.get(
           `http://localhost:8800/api/posts/homepage/${user._id}`
         );
-        setAllpost(res.data)
+        setAllpost(res.data);
       } catch (err) {
         console.log(err);
       }
     };
     getPost();
   }, []);
-  console.log(allpost)
+  console.log(allpost, 333);
 
   return (
     <div className="feed">
@@ -40,10 +42,14 @@ export default function Feed() {
       <div className="makePost">
         <div className="makePostWrapper">
           <Makepost />
+          <Categories />
         </div>
       </div>
-      <div className="suggetion">
-        
+      <div className="suggestion">
+        <div className="suggestionWrapper">
+          <Connections />
+          <Trending />
+        </div>
       </div>
     </div>
   );

@@ -35,8 +35,14 @@
     margin: 0 10px;
 }
 
-.seepostDate{
-    font-size: 12px;
+.seepostCategory{
+    font-size: 14px;
+    font-weight: bold;
+    color:white;
+    background-color: #000;
+    padding: 3px 6px;
+    margin-left: 20px;
+    border-radius: 5px;
 }
 
 .seepostCenter{
@@ -56,13 +62,44 @@
 
 .seepostBottom{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* background-color: blueviolet; */
 }
 
 .seepostBottomLeft{
     display: flex;
     align-items: center;
+    /* background-color: aqua; */
+    flex: 3,
+}
+
+.seePostRating{
+    margin-left: 85px;
+    margin-right: 5px;
+    /* background-color: greenyellow; */
+    flex:4,
+}
+
+.seepostBottomRight{
+    /* background-color: aquamarine; */
+    margin-bottom: 5px;
+    flex:3,
+}
+
+.ratingStar{
+    padding-top: 4px;
+    margin-right: 5px;
+    font-size: 4px;
+}
+
+.ratingStarEmpty{
+    color:rgb(169, 166, 166);
+}
+
+.ratingStarColored{
+    color: gold;
 }
 
 .reactIcon{
@@ -79,8 +116,78 @@
 }
 
 .seepostReviews{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     border-bottom: 1px solid #000;
+}
+
+.review{
+    margin-top: 5px;
+    padding: 5px 20px;
+}
+
+.createReview{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reviewerImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.reviewerUsername{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.writeReview{
+    margin-right: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 1px;
+}
+
+.writeReview:focus{
+    outline: none;
+}
+
+.doReview{
+    width: 20%;
+    height: 25px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    display: block;
+}
+
+.seeReviews{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    background-color:#fff5de;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.seeReviewsUserInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.seeReviewsData{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

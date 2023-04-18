@@ -15,8 +15,6 @@ router.post("/", async(req, res) => {
     }
 })
 
-module.exports = router;
-
 //get a post
 
 router.get("/:id", async(req, res) => {
@@ -44,3 +42,93 @@ router.get("/homepage/:userId", async(req, res) => {
         res.status(500).json(err)
     }
 })
+
+//like & dislike post
+
+router.put("/:id/like", async(req, res) => {
+    try{
+        const post = await Post.findById(req.params.id);
+        if (!post.likes.includes(req.body.userId)){
+            await post.updateOne({$push: {likes: req.body.userId}})
+            res.status(200).json("liked the post")
+        }else{
+            await post.updateOne({$pull: {likes:req.body.userId}})
+            res.status(200).json("disliked the post")
+        }
+    }catch(err){
+        res.status(500).json(err)
+    }
+})
+
+// write a review
+
+router.put("/review", async(req, res) => {
+    try{
+        const{review, userImg, postid, userName, rating} = req.body
+        const post = await Post.findById(postid);
+        //check if the user has already reviewed
+        const userHasReviewed = post.reviews.some(review => review.userName === userName)
+        
+        if (userHasReviewed) {
+            return res.status(400).json({msg: "You have already reviewed this post."})
+        }
+        const reviews = {
+            postid: postid,
+            userName: userName,
+            review: review,
+            userImg: userImg,
+            rating: rating,
+        };
+        
+        post.reviews.push(reviews)
+        console.log(post.reviews)
+        await post.save();
+        res.status(200).json(post);
+    }catch(err){
+        res.status(500).json({msg: err.message})
+    }
+})
+
+//get average rating
+
+router.get("/rating/:postid", async(req, res) => {
+    try{
+        const post = await Post.findById(req.params.postid);
+        const reviews = post.reviews;
+        const numReviews = reviews.length;
+        let totalRating = 0;
+        for(let i = 0; i<numReviews; i++) {
+            totalRating += reviews[i].rating;
+        }
+        const averageRating = totalRating / numReviews;
+        post.averageRating = averageRating;
+        await post.save();
+        res.status(200).json(post);
+    }catch(err){
+        res.status(500).json({message: err.message})
+    }
+})
+
+// all posts of a particular category
+
+router.get("/category/:userId", async(req, res) => {
+    try{
+        const user = await User.findById(req.params.userId);
+        const userPosts = await Post.find({userId: user._id, category: req.query.category});
+        const friendPosts = await Promise.all(
+            user.followings.map((friendId) => {
+                return Post.find({userId: friendId, category: req.query.category});
+            })
+        );
+        const allPosts = userPosts.concat(...friendPosts);
+        res.status(200).json(allPosts);
+    }catch(err){
+        res.status(500).json({
+            error: err.message
+        });
+    }
+});
+
+
+
+module.exports = router;

@@ -1,0 +1,96 @@
+.catepost {
+  width: 32%;
+  border-radius: 10px;
+  margin: 10px 0;
+  margin-right: 15px;
+  box-shadow: 0px 1px 24px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 24px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 24px -4px rgba(0, 0, 0, 0.75);
+}
+
+.catepostWrapper {
+  padding: 10px;
+}
+
+.catepostTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catepostTopLeft {
+  display: flex;
+  align-items: center;
+}
+
+.catepostProfImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.catepostUsername {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.catepostCategory {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #000;
+  padding: 3px 6px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.catepostCenter {
+  margin: 15px 0;
+}
+
+.catePostText {
+  font-size: 18px;
+}
+
+.catePostImg {
+  margin-top: 5px;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.catepostBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.catepostBottomLeft {
+  display: flex;
+  align-items: center;
+  /* background-color: aqua; */
+  flex: 3;
+}
+
+.catePostRating {
+  margin-left: 85px;
+  margin-right: 5px;
+  /* background-color: greenyellow; */
+  flex: 4;
+}
+
+.catepostBottomRight {
+  /* background-color: aquamarine; */
+  /* margin-bottom: 5px; */
+  flex: 3;
+}
+
+.rating1Star {
+  color: rgb(66, 66, 66);
+}
+
+.rating1StarColored {
+  color: gold;
+}
