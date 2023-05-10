@@ -1,13 +1,2 @@
-{
-    "type": "service_account",
-    "project_id": "vehicle-review-system",
-    "private_key_id": "c1aff43ae6a38c7166965a6da2a534da5a8f9e16",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+aasHfNuo4/fz\nWMmGRxK0k4tMYt/RFfM06ogJNxX7dJwY+sJXtQI1SvKGFvXgADvgsS2sR6043YJK\nnzhp9Hm/raj5mNoEmwZqm+olyAiMr9bcUzUEURVOc7wqQedUyUfPhREfNR8Oogz4\n2/CyqU/ikJnLxxVrDYFxtpaUm9vUGTx83lGY/k+bx4rCdfyeJSeREBH9u+QBZ9nc\n1g0EWAuamchdr9zfRjoHNZ7c2DmEAx2e1lEP3MS/13xhkvTh9/DKxVN+GaiMdmtd\nuOPHuX/k1foKCXy0N4+M6OUFxDykcMuncygmehTh6MZEfGtg94m/h5PGHbn+gPev\n4hfMXlznAgMBAAECggEANj7nTQpKj9pmRIrqWpk74HraJ+hRKAFPWKdqGun5Frp5\nT/p8TD1ShDk2T3ISGP8oD9KaFucSl80vNbAXg8P0vWEtbvIXRlGd6dhCRAIxQVdE\n6F7CD1lELyX0mLtOuo5fKWUY5CGfl+0dsfYCo/ttOTgFwJKWbPmbg3hHfM3MOid5\nf6NMiqkiIiB5IM8cVeHimmJIn3tHs1ebw/K+tP2tfjs307ygwGqMWppgnd1JX4Sq\nnV3kP8qJAy1jSiIZJ4qLAs98B+xy5v/a4NSSODI18vr1n/rLaiWD088NlTYUgJNT\nanP0bKKMWVCdCjuKn1IGv9tzw4YOLQq0EYSBLF6zEQKBgQD7jqwGJ/8N2C06k1JN\n2iu6gKISgxYNIGq8kFC/WII5RfXzdA+VNWibqUvPNkItNv4aUyeD8mnuF0vRpgy4\nef7/yyzVJ1VrHPnPINDX1Kx4kygwOQ7x2v7nZXIBab2O/yN/I3Cpj7F7JPAlENew\nyKapcT3V5rV+Hk6zS1KMS9Ri8QKBgQDBxo1yMon4x/0u4chpCTNUa8UrJYA7sNYv\npOJXKAWH5/B8H+WOqvOfL/2NedHK4tgiJyDBc2+o/wu2QbhVbzye2SDSbP//OGzB\nMdQIuvxTdozdnBL2xbX65D7dkqNrBQDmEQw184WA8V6/c4tu5xfXpgupTkmWBT8U\nOm5lE9KNVwKBgQDkexiJ2ugRJgkmi8qUhZV0JwON9twffhMUQ6vjr7tP09hpkD/b\nERB7WdBOW4TN1oYDWQWqFZLbOvOVbtFc+QmAQYTt8XTm/gFzfOXTMwqX1WkKK7kE\nORmPCJf86pLOf7Q49PKOP8I/DDTGJb8ShZzCh+VXE95Ct7pZpQ9L+E/msQKBgDzI\nGCQjAC4+JQeooOF5llU7vMwM5k1S6cxmDu1By4JW2ZNFug7nRqW/Ouw+svTN9Pe5\niEfF+tdqsPTJZpW936j/+JCoyh/3Rf3PsG/Qn0da31LAGx62459AKwv7bDEsj5ya\n6lad/Vl13L928dymtk7Zcbz4ppJdMO0aavhfoGLfAoGAS9f3N3Uk21YuXZxx5ZLx\nRfBgT8+6ouwkD6YGIsVy6LDNLj9qvr+U2TybOl7ecpaHcIbsFCvJODjpHGPJ70oB\nBlq20IlxnEM4BZ8KHrrkY4m9gmomzdqnzNKkko5pEsZc54KAg07S47CaYZEfGHBH\nrBbhVn4Bl5liYCQaG67xOTU=\n-----END PRIVATE KEY-----\n",
-    "client_email": "firebase-adminsdk-qsbgt@vehicle-review-system.iam.gserviceaccount.com",
-    "client_id": "112787226040038557684",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-qsbgt%40vehicle-review-system.iam.gserviceaccount.com"
-  }
+{}
   
